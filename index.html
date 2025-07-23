@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In & Out - Importateur de vêtements professionnels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(10, 29, 55, 0.7), rgba(10, 29, 55, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #0A1D37;
+        }
+        
+        .language-switch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Language Switch Button -->
+    <div class="language-switch">
+        <button id="toggleLanguage" class="bg-blue-900 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 transition">
+            <i class="fas fa-language mr-2"></i>EN/FR
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-blue-900 font-bold text-2xl">IN & OUT</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-blue-900 hover:text-blue-700 transition">Accueil</a>
+                    <a href="#products" class="text-blue-900 hover:text-blue-700 transition">Produits</a>
+                    <a href="#story" class="text-blue-900 hover:text-blue-700 transition">Histoire</a>
+                    <a href="#advantages" class="text-blue-900 hover:text-blue-700 transition">Avantages</a>
+                    <a href="#quote" class="text-blue-900 hover:text-blue-700 transition">Devis</a>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menuBtn" class="text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-blue-900 hover:text-blue-700 transition">Accueil</a>
+                <a href="#products" class="text-blue-900 hover:text-blue-700 transition">Produits</a>
+                <a href="#story" class="text-blue-900 hover:text-blue-700 transition">Histoire</a>
+                <a href="#advantages" class="text-blue-900 hover:text-blue-700 transition">Avantages</a>
+                <a href="#quote" class="text-blue-900 hover:text-blue-700 transition">Devis</a>
+                <a href="#contact" class="text-blue-900 hover:text-blue-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">In & Out – Sentez la qualité. Pas le prix.</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Des vêtements à la mode, au prix direct usine. Livraison rapide, qualité garantie.</p>
+            <a href="#products" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition inline-block">Découvrir notre offre</a>
+        </div>
+    </section>
+
+<section id="produits" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+      Nos produits phares
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <!-- Produit 1 -->
+      <div class="text-center">
+        <img src="Images/img1.avif" alt="T-shirt premium" class="w-full rounded-lg shadow-md mb-4" />
+        <h3 class="text-xl font-semibold text-blue-900">T-shirt premium</h3>
+        <p class="text-gray-600">Confortable et tendance, disponible en plusieurs tailles.</p>
+      </div>
+
+      <!-- Produit 2 -->
+      <div class="text-center">
+        <img src="Images/img3.avif" alt="Chemise classique" class="w-full rounded-lg shadow-md mb-4" />
+        <h3 class="text-xl font-semibold text-blue-900">Chemise classique</h3>
+        <p class="text-gray-600">Idéale pour un look professionnel et élégant.</p>
+      </div>
+
+      <!-- Produit 3 -->
+      <div class="text-center">
+        <img src="Images/img4.avif" alt="Pantalon ajusté" class="w-full rounded-lg shadow-md mb-4" />
+        <h3 class="text-xl font-semibold text-blue-900">Pantalon ajusté</h3>
+        <p class="text-gray-600">Coupe moderne et confortable, parfait pour le quotidien.</p>
+      </div>
+
+      <!-- Produit 4 -->
+      <div class="text-center">
+        <img src="Images/img6.avif" alt="Veste légère" class="w-full rounded-lg shadow-md mb-4" />
+        <h3 class="text-xl font-semibold text-blue-900">Veste légère</h3>
+        <p class="text-gray-600">Un basique intemporel pour toutes les saisons.</p>
+      </div>
+
+      <!-- Produit 5 -->
+      <div class="text-center">
+        <img src="Images/img7.avif" alt="Accessoires variés" class="w-full rounded-lg shadow-md mb-4" />
+        <h3 class="text-xl font-semibold text-blue-900">Accessoires variés</h3>
+        <p class="text-gray-600">Casquettes, ceintures et autres accessoires mode.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Notre Histoire</h2>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Notre équipe" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <p class="text-lg mb-6">In & Out est une entreprise familiale fondée en 2015 par deux frères franco-bangladais, Rami et Karim Iskandar. Notre vision repose sur des valeurs humaines, une éthique forte et une performance logistique exceptionnelle.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-medal text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Qualité</h4>
+                                <p class="text-gray-600">Nous sélectionnons avec soin chaque matière et contrôlons chaque vêtement avant expédition.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-hand-holding-heart text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Respect des personnes</h4>
+                                <p class="text-gray-600">Nos partenaires au Bangladesh bénéficient de conditions de travail dignes et d'un salaire équitable.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-eye text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Transparence</h4>
+                                <p class="text-gray-600">Nous vous informons sur l'origine de nos produits et notre chaîne de production.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Fiabilité</h4>
+                                <p class="text-gray-600">Des délais de livraison respectés et une communication constante avec nos clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Nos Avantages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Advantage 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tags text-blue-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Prix direct usine</h3>
+                    <p class="text-gray-600">Pas d'intermédiaires, nous travaillons directement avec les usines au Bangladesh pour vous offrir les meilleurs prix.</p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-blue-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Livraison express</h3>
+                    <p class="text-gray-600">Livraison sous 48h en France grâce à notre stock local et notre réseau logistique optimisé.</p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-check-circle text-blue-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Contrôle qualité</h3>
+                    <p class="text-gray-600">Notre équipe sur place effectue des contrôles qualité rigoureux avant chaque expédition.</p>
+                </div>
+                
+                <!-- Advantage 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-blue-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Produits durables</h3>
+                    <p class="text-gray-600">Nous privilégions des matières de qualité pour des vêtements qui durent dans le temps.</p>
+                </div>
+                
+                <!-- Advantage 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-blue-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Accompagnement</h3>
+                    <p class="text-gray-600">Un conseiller dédié pour chaque client professionnel, disponible pour répondre à vos besoins.</p>
+                </div>
+                
+                <!-- Advantage 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lock text-blue-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Exclusivités</h3>
+                    <p class="text-gray-600">Possibilité d'obtenir des références exclusives pour votre boutique ou votre marque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Quote Section -->
+<section id="quote" class="py-16 bg-blue-900 text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Demander un devis</h2>
+
+    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <form id="quoteForm" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-blue-900 font-medium mb-2">Nom / Name</label>
+            <input type="text" id="name" name="name" required class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-blue-900 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="product" class="block text-blue-900 font-medium mb-2">Type de produit / Product type</label>
+            <select id="product" name="product" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Sélectionnez...</option>
+              <option value="t-shirts">T-shirts</option>
+              <option value="polos">Polos</option>
+              <option value="sweats">Sweats</option>
+              <option value="pants">Pantalons</option>
+              <option value="jackets">Vestes</option>
+              <option value="shirts">Chemises</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="quantity" class="block text-blue-900 font-medium mb-2">Quantité estimée / Quantity</label>
+            <input type="text" id="quantity" name="quantity" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div>
+          <label for="message" class="block text-blue-900 font-medium mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <p class="text-blue-900 text-sm italic">Recevez un devis sous 24h, sans engagement.</p>
+
+        <button type="submit" class="bg-blue-900 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-800 transition w-full md:w-auto">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Témoignages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Livraison rapide et qualité au top. Nous travaillons avec In & Out depuis 2 ans et n'avons jamais été déçus."</p>
+                    <p class="font-bold text-blue-900">Paris Mode Pro</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Excellente communication, très professionnel. Les délais sont toujours respectés et les produits correspondent parfaitement aux échantillons."</p>
+                    <p class="font-bold text-blue-900">DistriTextile</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Produits mieux finis que nos fournisseurs précédents. Le rapport qualité-prix est imbattable sur le marché."</p>
+                    <p class="font-bold text-blue-900">Boutique Céline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Contact</h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">Coordonnées</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Email</h4>
+                                <p class="text-gray-600">contact@inandout.fr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Adresse</h4>
+                                <p class="text-gray-600">35 rue de Vaugirard, 75015 Paris, France</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-truck text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">Livraison</h4>
+                                <p class="text-gray-600">Livraison dans toute la France sous 48h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4 text-blue-900">Horaires</h3>
+                        <p class="text-gray-600">Lundi - Vendredi : 9h - 18h</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">Envoyez-nous un message</h3>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label for="contactName" class="block text-blue-900 font-medium mb-2">Nom / Name</label>
+                            <input type="text" id="contactName" name="contactName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="contactEmail" class="block text-blue-900 font-medium mb-2">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="contactMessage" class="block text-blue-900 font-medium mb-2">Message</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-blue-900 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-800 transition">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">IN & OUT</a>
+                    <p class="mt-2 text-blue-200">Importateur de vêtements professionnels</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold mb-4">Navigation</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-blue-300 transition">Accueil</a></li>
+                            <li><a href="#products" class="hover:text-blue-300 transition">Produits</a></li>
+                            <li><a href="#story" class="hover:text-blue-300 transition">Histoire</a></li>
+                            <li><a href="#advantages" class="hover:text-blue-300 transition">Avantages</a></li>
+                            <li><a href="#quote" class="hover:text-blue-300 transition">Devis</a></li>
+                            <li><a href="#contact" class="hover:text-blue-300 transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Informations</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-300 transition">Mentions légales</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition">Conditions générales</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition">Politique de confidentialité</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Inscription newsletter</h4>
+                        <form class="flex">
+                            <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md text-gray-800 focus:outline-none w-full">
+                            <button type="submit" class="bg-blue-700 px-4 py-2 rounded-r-md hover:bg-blue-600 transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-blue-300 text-sm">
+                <p>SARL In & Out – SIRET : 92234567800014 – Siège social : 35 rue de Vaugirard, Paris 15e</p>
+                <p class="mt-2">Responsable publication : Rami Iskandar</p>
+                <p class="mt-2">© 2023 In & Out. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- English Version (initially hidden) -->
+    <div id="englishVersion" class="hidden">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <a href="#" class="text-blue-900 font-bold text-2xl">IN & OUT</a>
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="text-blue-900 hover:text-blue-700 transition">Home</a>
+                        <a href="#products" class="text-blue-900 hover:text-blue-700 transition">Products</a>
+                        <a href="#story" class="text-blue-900 hover:text-blue-700 transition">Story</a>
+                        <a href="#advantages" class="text-blue-900 hover:text-blue-700 transition">Advantages</a>
+                        <a href="#quote" class="text-blue-900 hover:text-blue-700 transition">Quote</a>
+                        <a href="#contact" class="text-blue-900 hover:text-blue-700 transition">Contact</a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menuBtnEn" class="text-blue-900 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenuEn" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-blue-900 hover:text-blue-700 transition">Home</a>
+                    <a href="#products" class="text-blue-900 hover:text-blue-700 transition">Products</a>
+                    <a href="#story" class="text-blue-900 hover:text-blue-700 transition">Story</a>
+                    <a href="#advantages" class="text-blue-900 hover:text-blue-700 transition">Advantages</a>
+                    <a href="#quote" class="text-blue-900 hover:text-blue-700 transition">Quote</a>
+                    <a href="#contact" class="text-blue-900 hover:text-blue-700 transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section text-white py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">In & Out – Feel the quality. Not the price.</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Trendy clothing at factory direct prices. Fast delivery, guaranteed quality.</p>
+                <a href="#products" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition inline-block">Explore our offer</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Products</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="T-shirts" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-900">T-shirts</h3>
+                            <p class="text-gray-600">High quality cotton t-shirts, available in different cuts and colors, ideal for customization.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1325&q=80" alt="Polos" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-900">Polos</h3>
+                            <p class="text-gray-600">Elegant cotton piqué polos, reinforced collar, impeccable finish for a professional look.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1372&q=80" alt="Sweatshirts" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-900">Sweatshirts</h3>
+                            <p class="text-gray-600">Soft cotton hoodies and crewnecks, modern cuts, perfect for fall/winter collections.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="Pants" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-900">Pants</h3>
+                            <p class="text-gray-600">High quality chinos and jeans, various cuts and colors to complete your collection.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Jackets" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-900">Jackets</h3>
+                            <p class="text-gray-600">Light jackets and padded coats for all seasons, trendy designs and quality materials.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1325&q=80" alt="Shirts" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-blue-900">Shirts</h3>
+                            <p class="text-gray-600">Men's and women's shirts in cotton and linen, classic and contemporary cuts, careful finish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Story</h2>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Our team" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <p class="text-lg mb-6">In & Out is a family business founded in 2015 by two French-Bangladeshi brothers, Rami and Karim Iskandar. Our vision is based on human values, strong ethics and exceptional logistics performance.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-medal text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Quality</h4>
+                                    <p class="text-gray-600">We carefully select each material and inspect every garment before shipping.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-hand-holding-heart text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Respect for people</h4>
+                                    <p class="text-gray-600">Our partners in Bangladesh benefit from decent working conditions and fair wages.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-eye text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Transparency</h4>
+                                    <p class="text-gray-600">We inform you about the origin of our products and our production chain.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-clock text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Reliability</h4>
+                                    <p class="text-gray-600">Respected delivery times and constant communication with our customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages Section -->
+        <section id="advantages" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Advantages</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Advantage 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-tags text-blue-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Factory direct prices</h3>
+                        <p class="text-gray-600">No intermediaries, we work directly with factories in Bangladesh to offer you the best prices.</p>
+                    </div>
+                    
+                    <!-- Advantage 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-truck text-blue-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Express delivery</h3>
+                        <p class="text-gray-600">Delivery within 48 hours in France thanks to our local stock and optimized logistics network.</p>
+                    </div>
+                    
+                    <!-- Advantage 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-blue-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Quality control</h3>
+                        <p class="text-gray-600">Our team on site carries out rigorous quality checks before each shipment.</p>
+                    </div>
+                    
+                    <!-- Advantage 4 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-leaf text-blue-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Durable products</h3>
+                        <p class="text-gray-600">We favor quality materials for clothing that lasts over time.</p>
+                    </div>
+                    
+                    <!-- Advantage 5 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-headset text-blue-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Support</h3>
+                        <p class="text-gray-600">A dedicated advisor for each professional client, available to meet your needs.</p>
+                    </div>
+                    
+                    <!-- Advantage 6 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-lock text-blue-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Exclusivities</h3>
+                        <p class="text-gray-600">Possibility to obtain exclusive references for your store or your brand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Quote Section -->
+<section id="quote" class="py-16 bg-blue-900 text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Demander un devis</h2>
+
+    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <form id="quoteForm" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-blue-900 font-medium mb-2">Nom / Name</label>
+            <input type="text" id="name" name="name" required class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-blue-900 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="product" class="block text-blue-900 font-medium mb-2">Type de produit / Product type</label>
+            <select id="product" name="product" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Sélectionnez...</option>
+              <option value="t-shirts">T-shirts</option>
+              <option value="polos">Polos</option>
+              <option value="sweats">Sweats</option>
+              <option value="pants">Pantalons</option>
+              <option value="jackets">Vestes</option>
+              <option value="shirts">Chemises</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="quantity" class="block text-blue-900 font-medium mb-2">Quantité estimée / Quantity</label>
+            <input type="text" id="quantity" name="quantity" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div>
+          <label for="message" class="block text-blue-900 font-medium mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <p class="text-blue-900 text-sm italic">Recevez un devis sous 24h, sans engagement.</p>
+
+        <button type="submit" class="bg-blue-900 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-800 transition w-full md:w-auto">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Testimonials</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"Fast delivery and top quality. We've been working with In & Out for 2 years and have never been disappointed."</p>
+                        <p class="font-bold text-blue-900">Paris Mode Pro</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"Excellent communication, very professional. Deadlines are always respected and products perfectly match the samples."</p>
+                        <p class="font-bold text-blue-900">DistriTextile</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"Products better finished than our previous suppliers. The quality-price ratio is unbeatable on the market."</p>
+                        <p class="font-bold text-blue-900">Boutique Céline</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Contact</h2>
+                
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-blue-900">Contact details</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Email</h4>
+                                    <p class="text-gray-600">contact@inandout.fr</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Address</h4>
+                                    <p class="text-gray-600">35 rue de Vaugirard, 75015 Paris, France</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-truck text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">Delivery</h4>
+                                    <p class="text-gray-600">Delivery throughout France within 48 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-xl font-bold mb-4 text-blue-900">Opening hours</h3>
+                            <p class="text-gray-600">Monday - Friday: 9am - 6pm</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-blue-900">Send us a message</h3>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label for="contactNameEn" class="block text-blue-900 font-medium mb-2">Name</label>
+                                <input type="text" id="contactNameEn" name="contactNameEn" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contactEmailEn" class="block text-blue-900 font-medium mb-2">Email</label>
+                                <input type="email" id="contactEmailEn" name="contactEmailEn" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contactMessageEn" class="block text-blue-900 font-medium mb-2">Message</label>
+                                <textarea id="contactMessageEn" name="contactMessageEn" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-900 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-800 transition">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-blue-900 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <a href="#" class="text-2xl font-bold">IN & OUT</a>
+                        <p class="mt-2 text-blue-200">Professional clothing importer</p>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-blue-800 mt-8 pt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-bold mb-4">Navigation</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#home" class="hover:text-blue-300 transition">Home</a></li>
+                                <li><a href="#products" class="hover:text-blue-300 transition">Products</a></li>
+                                <li><a href="#story" class="hover:text-blue-300 transition">Story</a></li>
+                                <li><a href="#advantages" class="hover:text-blue-300 transition">Advantages</a></li>
+                                <li><a href="#quote" class="hover:text-blue-300 transition">Quote</a></li>
+                                <li><a href="#contact" class="hover:text-blue-300 transition">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4">Information</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-blue-300 transition">Legal notice</a></li>
+                                <li><a href="#" class="hover:text-blue-300 transition">Terms & conditions</a></li>
+                                <li><a href="#" class="hover:text-blue-300 transition">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4">Newsletter</h4>
+                            <form class="flex">
+                                <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-800 focus:outline-none w-full">
+                                <button type="submit" class="bg-blue-700 px-4 py-2 rounded-r-md hover:bg-blue-600 transition">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center text-blue-300 text-sm">
+                    <p>SARL In & Out – SIRET : 92234567800014 – Headquarters : 35 rue de Vaugirard, Paris 15e</p>
+                    <p class="mt-2">Publication manager : Rami Iskandar</p>
+                    <p class="mt-2">© 2023 In & Out. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Mobile menu toggle for English version
+        const menuBtnEn = document.getElementById('menuBtnEn');
+        const mobileMenuEn = document.getElementById('mobileMenuEn');
+        
+        if (menuBtnEn && mobileMenuEn) {
+            menuBtnEn.addEventListener('click', () => {
+                mobileMenuEn.classList.toggle('hidden');
+            });
+        }
+        
+        // Language toggle
+        const toggleLanguage = document.getElementById('toggleLanguage');
+        const englishVersion = document.getElementById('englishVersion');
+        const frenchElements = document.querySelectorAll('body > *:not(#englishVersion):not(script)');
+        
+        let isEnglish = false;
+        
+        toggleLanguage.addEventListener('click', () => {
+            isEnglish = !isEnglish;
+            
+            if (isEnglish) {
+                // Switch to English
+                frenchElements.forEach(el => el.style.display = 'none');
+                englishVersion.style.display = 'block';
+                toggleLanguage.innerHTML = '<i class="fas fa-language mr-2"></i>FR/EN';
+            } else {
+                // Switch to French
+                frenchElements.forEach(el => el.style.display = 'block');
+                englishVersion.style.display = 'none';
+                toggleLanguage.innerHTML = '<i class="fas fa-language mr-2"></i>EN/FR';
+            }
+            
+            // Close mobile menus when switching language
+            mobileMenu.classList.add('hidden');
+            if (mobileMenuEn) mobileMenuEn.classList.add('hidden');
+        });
+        
+        // Form submission
+        const quoteForm = document.getElementById('quoteForm');
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Merci pour votre demande de devis. Nous vous répondrons dans les 24 heures.');
+                quoteForm.reset();
+            });
+        }
+        
+        const quoteFormEn = document.getElementById('quoteFormEn');
+        if (quoteFormEn) {
+            quoteFormEn.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your quote request. We will respond within 24 hours.');
+                quoteFormEn.reset();
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    if (mobileMenuEn) mobileMenuEn.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
